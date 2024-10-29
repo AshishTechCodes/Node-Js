@@ -1,6 +1,5 @@
 var url = require('url');
 var adr = 'https://www.nasa.gov/nasa-socials/';
-//Parse the address:
 var q = url.parse(adr, true);
 
 /*The parse method returns an object containing url properties*/

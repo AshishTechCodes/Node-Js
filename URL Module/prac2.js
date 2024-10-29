@@ -1,7 +1,7 @@
 const http = require('http');
 const url = require('url');
 
-const adr = 'https://www.nasa.gov/nasa-socials/';
+const adr = 'https://upsc.gov.in/examinations/National%20Defence%20Academy%20and%20Naval%20Academy%20Examination%20%28II%29%2C%202024';
 const U = url.parse(adr, true);
 
 http.createServer((req, res) => {
