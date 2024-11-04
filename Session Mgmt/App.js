@@ -11,9 +11,8 @@ app.use(session({
   cookie: { secure: false }
 }));
 
-// Dummy user data with plain-text password (not secure for production use)
 const users = {
-  user1: { username: 'user1', password: '123' }  // Plain-text password
+  user1: { username: 'user1', password: '123' } 
 };
 
 app.get('/login', (req, res) => req.session.loggedIn ? res.redirect('/dashboard') : res.render('login'));
@@ -22,7 +21,6 @@ app.post('/login', (req, res) => {
   const { username, password } = req.body;
   const user = users[username];
 
-  // Compare plain-text passwords
   if (user && user.password === password) {
     req.session.loggedIn = true;
     req.session.username = username;

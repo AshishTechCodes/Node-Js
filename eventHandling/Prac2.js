@@ -8,4 +8,4 @@ myEmitter.on('greet', (name) => {
   console.log(`Hello, ${name}!`);
 });
 
-myEmitter.emit('greet', 'Alice');
+myEmitter.emit('greet', 'Ashish');
