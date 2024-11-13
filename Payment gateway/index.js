@@ -3,8 +3,8 @@ const bodyparser = require("body-parser");
 const path = require("path");
 const app = express();
 
-const Publishable_Key = "pk_test_51QKYi2QMn2pFlr0GhSqa0e5dZohtjJp9GLuvTpKBiOG4TJ3f7VAxzVYH4L13NNFFCLYnaDN9brut6pvsp0qVB4a9Z1CVmO0dKcCuxvRY";
-const Secret_Key = "sk_test_51QKYi2QMn2pFlr0GhMGsaDIPS4rFr3Dr1TkGZ2ACe7Fb0wKFAURdqQYskJcElx5q3GSLcYVmMgJwOZsbjJWmZ1bKD88MG67uwe9";
+const Publishable_Key = "pk_test_51QKh7HGD4okwYzMi244BhW3R0IYsLVLVuFHR6NfgNSGVzaIEvTw7j6AgcaSfCSolHaXkYh7Y86Q5EskT3d3t47Ed00YbkKKXrL";
+const Secret_Key = "sk_test_51QKh7HGD4okwYzMi3AnjWP5W7sQN5hgYoQeliRyLYBrFnoBiRQFouSquSt3gwLGb7FNUJ4vyIMAjLHAFKigTAHOh00V43Aq9Yf";
 
 const stripe = require("stripe")(Secret_Key);
 
@@ -28,12 +28,12 @@ app.post("/payment", function (req, res) {
         .create({
             email: req.body.stripeEmail,
             source: req.body.stripeToken,
-            name: "Gourav Hammad",
+            name: "Pranshu Singh",
             address: {
-                line1: "TC 9/4 Old MES colony",
-                postal_code: "452331",
-                city: "Indore",
-                state: "Madhya Pradesh",
+                line1: "Sushila sadan vijay nagar nallasopara (east)",
+                postal_code: "401209",
+                city: "Mumbai",
+                state: "Uttar Pradesh",
                 country: "India",
             }
         })
